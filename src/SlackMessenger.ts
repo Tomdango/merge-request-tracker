@@ -78,7 +78,7 @@ class SlackMessenger {
       if (process.env.NODE_ENV !== 'development') {
         await this.client.chat.postMessage({
           channel: this.channelId,
-          text: 'Ping!',
+          text: '_Ignore me, this is just to check I can talk to the channel!_',
         });
         Logger.info('Successfully pinged Slack Channel', { channelId: this.channelId });
       }
