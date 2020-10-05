@@ -69,7 +69,7 @@ class GitlabHandler {
 
   constructor() {
     this.api = new Gitlab({
-      host: 'http://git.spine2.ncrs.nhs.uk',
+      host: process.env.GIT_HOST,
       token: process.env.GIT_ACCESS_TOKEN,
     });
     if (!process.env.GITLAB_PROJECT_ID) {
