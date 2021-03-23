@@ -37,7 +37,7 @@ class CronScheduler {
         Logger.info('Job Completed Successfully');
       } else {
         const day = new Date().getDay();
-        if (day !== 6 && day !== 7) {
+        if (day !== 6 && day !== 0) { // Sunday = 0 , Saturday = 6
           Logger.info('Triggering Job');
           await this.safeCallback();
           Logger.info('Job Completed Successfully');
